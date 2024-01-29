@@ -1,12 +1,15 @@
 
+const form = document.querySelector('form.add');
 const addButton = document.querySelector('#addButton');
 const itemToAdd = document.querySelector('#itemToAdd');
-const ul = document.querySelector('.todo')
+const ul = document.querySelector('.todo');
 
-addButton.addEventListener('click', function(){
-    const newItem = createItem(itemToAdd.value);
-    ul.appendChild(newItem);
-
+form.addEventListener('submit', function(event){
+    event.preventDefault();
+    if (itemToAdd.value.length !== 0){
+        const newItem = createItem(itemToAdd.value);
+        ul.appendChild(newItem);
+    };
     itemToAdd.value = '';
     itemToAdd.focus();
 });
