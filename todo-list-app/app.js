@@ -9,8 +9,15 @@ addButton.addEventListener('click', function(){
 });
 
 function createItem(val){
-    const item = document.createElement('li')
-    item.textContent = val;
+    const item = document.createElement('li');
+    const span = document.createElement('span');
+    const delbtn = document.createElement('button');
+
+    span.textContent = val;
+    delbtn.textContent = 'Delete';
+
+    item.appendChild(span);
+    item.appendChild(delbtn);
 
     return item;
 };
