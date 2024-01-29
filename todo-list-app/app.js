@@ -15,6 +15,7 @@ function createItem(val){
 
     span.textContent = val;
     delbtn.textContent = 'Delete';
+    delbtn.classList.add('btn-link');
 
     item.appendChild(span);
     item.appendChild(delbtn);
