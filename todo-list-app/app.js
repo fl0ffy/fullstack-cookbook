@@ -19,6 +19,10 @@ function createItem(val){
     item.appendChild(span);
     item.appendChild(delbtn);
 
+    delbtn.addEventListener('click', function(){
+        item.parentNode.removeChild(item);
+    });
+
     return item;
 };
 
