@@ -6,12 +6,12 @@ const ul = document.querySelector('.todo');
 
 form.addEventListener('submit', function(event){
     event.preventDefault();
-    if (itemToAdd.value.length !== 0){
+    if (itemToAdd.value){
         const newItem = createItem(itemToAdd.value);
         ul.appendChild(newItem);
+        itemToAdd.value = '';
+        itemToAdd.focus();
     };
-    itemToAdd.value = '';
-    itemToAdd.focus();
 });
 
 function createItem(val){
