@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const helpTextElm = document.querySelector('.help-text');
 
     for (let i = 0; i<helpTextList.length; i++){
-        let btn = document.querySelector('#' + helpTextList[i].id);
+        let btn = document.querySelector(`#${helpTextList[i].id}`);
         // console.log(btn);
 
         // const helpTextMaker = (j)=>{
