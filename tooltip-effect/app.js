@@ -17,19 +17,21 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     const helpTextElm = document.querySelector('.help-text');
 
-    for (i = 0; i<helpTextList.length; i++){
+    for (let i = 0; i<helpTextList.length; i++){
         let btn = document.querySelector('#' + helpTextList[i].id);
         // console.log(btn);
 
-        const helpTextMaker = (j)=>{
-            return ()=>{
-                // console.log(j);
-                // console.log(helpTextList[j].text);
-                helpTextElm.textContent = helpTextList[j].text;
-            }
-        }
+        // const helpTextMaker = (j)=>{
+        //     return ()=>{
+        //         // console.log(j);
+        //         // console.log(helpTextList[j].text);
+        //         helpTextElm.textContent = helpTextList[j].text;
+        //     }
+        // }
 
-        btn.addEventListener('mouseenter', helpTextMaker(i));
+        btn.addEventListener('mouseenter', ()=>{
+            helpTextElm.textContent = helpTextList[i].text;
+        });
         btn.addEventListener('mouseleave', ()=> helpTextElm.textContent = '')
 
         // btn.addEventListener('mouseleave', ()=> {
