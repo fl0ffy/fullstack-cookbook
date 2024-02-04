@@ -19,17 +19,22 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
     for (i = 0; i<helpTextList.length; i++){
         let btn = document.querySelector('#' + helpTextList[i].id);
-        console.log(btn);
+        // console.log(btn);
 
         const helpTextMaker = (j)=>{
             return ()=>{
-                console.log(j);
-                console.log(helpTextList[j].text);
-                // helpTextElm.content = helpTextList[j].text;
+                // console.log(j);
+                // console.log(helpTextList[j].text);
+                helpTextElm.textContent = helpTextList[j].text;
             }
         }
 
         btn.addEventListener('mouseenter', helpTextMaker(i));
+        btn.addEventListener('mouseleave', ()=> helpTextElm.textContent = '')
+
+        // btn.addEventListener('mouseleave', ()=> {
+        //     helpTextElm.textContent = '';
+        // })
     }
 
 })
