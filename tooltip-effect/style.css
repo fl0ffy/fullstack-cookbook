@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #673ab7;
+}
+
+nav{
+    margin-top: 10px;
+}
+
+a.btn{
+    color: #fff;
+    background-color: orchid;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+a.btn:hover{
+    background-color: rgb(112, 218, 160);
+}
+
+.help-text{
+    margin-top: 10px;
+    color: #fff;
+    font-size: .8em;
+}
+
