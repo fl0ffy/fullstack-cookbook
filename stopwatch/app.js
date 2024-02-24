@@ -64,8 +64,10 @@ function init(){
             timeHours = Math.floor(timeMinutes/60);
 
         miliseconds.innerText = twoDigiter(timeMiliSeconds);
-        seconds.innerText = twoDigiter(processSixty(timeSeconds));
-        minutes.innerText = twoDigiter(processSixty(timeMinutes));
+        seconds.innerText = twoDigiter(timeSeconds % 60);
+        minutes.innerText = twoDigiter(timeMinutes % 60);
+        // seconds.innerText = twoDigiter(processSixty(timeSeconds));
+        // minutes.innerText = twoDigiter(processSixty(timeMinutes));
         hours.innerText = twoDigiter(timeHours);
     };
 
@@ -79,12 +81,12 @@ function init(){
     };
 
     // use %60 and render this funtion OBE
-    var processSixty = function(number){
-        var divisible = Math.floor(number/60);
-        if(number/60 >= divisible){
-          return number - 60 * divisible;
-        }
-      };
+    // var processSixty = function(number){
+    //     var divisible = Math.floor(number/60);
+    //     if(number/60 >= divisible){
+    //       return number - 60 * divisible;
+    //     }
+    //   };
 
 
     // Event listeners
