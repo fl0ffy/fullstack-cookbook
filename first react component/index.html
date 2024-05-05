@@ -22,10 +22,14 @@
                 );
             }
                 
-            ReactDOM.render(
-                <FirstComp name="johan" />,
-                document.getElementById('root')
-            );
+            // React 16
+            // ReactDOM.client.render(
+            //     <FirstComp name="johan" />,
+            //     document.getElementById('root')
+            // );
+
+            // React 18
+            ReactDOM.createRoot(document.getElementById('root')).render(<FirstComp name="johan" />);
 
         })();
     </script>
